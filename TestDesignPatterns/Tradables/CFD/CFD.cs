@@ -12,5 +12,11 @@ namespace TestDesignPatterns
             : base(symbol)
         {    
         }
+
+        public override Tradable Clone()
+        {
+            Tradable t = new CFD(this.symbol);
+            return t;
+        }
     }
 }

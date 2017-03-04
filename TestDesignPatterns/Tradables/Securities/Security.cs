@@ -12,6 +12,10 @@ namespace TestDesignPatterns
         {    
         }
 
-
+        public override Tradable Clone()
+        {
+            Tradable t = new Security(this.symbol);
+            return t;
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace TestDesignPatterns
         public Market()
         {
             Create();
-            Display();
+            //Display();
         }
 
         public virtual void Create()
@@ -68,10 +68,18 @@ namespace TestDesignPatterns
                 }
 
 
+                Console.WriteLine("Is Exchange?");
+                Exchange t5 = o as Exchange;
+                if (t5 != null)
+                {
+                    Console.WriteLine("YES name = " + t5.name);
+                }
+
+
                 Console.WriteLine();
             }
         }
-        public virtual void Add(Tradable t)
+        public virtual void AddTradable(Tradable t)
         {
             array.Add(t);
         }
@@ -97,6 +105,10 @@ namespace TestDesignPatterns
             return new Market();
         }
 
+        public void AddExchange(Exchange ex)
+        {
+            array.Add(ex);
+        }
  
     }
 }

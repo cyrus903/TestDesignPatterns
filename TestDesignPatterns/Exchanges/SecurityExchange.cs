@@ -7,5 +7,9 @@ namespace TestDesignPatterns.Exchanges
 {
     class SecurityExchange : Exchange
     {
+        public SecurityExchange(string name)
+            : base(name)
+        {
+        }
     }
 }

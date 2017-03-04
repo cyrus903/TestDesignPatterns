@@ -10,7 +10,7 @@ namespace TestDesignPatterns
         public override void Create()
         {
             Tradable t = new Security("0003");
-            Add(t);
+            AddTradable(t);
         }
         //public  void Display()
         //{

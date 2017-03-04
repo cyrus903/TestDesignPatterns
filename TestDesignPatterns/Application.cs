@@ -31,33 +31,80 @@ namespace TestDesignPatterns
             //How to create a different market (different compositions) at run-time?
             //Abstract Factory: To create a family of objects - without specifying the concrete classes
             //Provide an interface for creating families of related or dependent objects without specifying their concrete classes
-            //focuses on building a families of parts (either simple or complex), and returns the part immediately. Client assembles the parts into complex object
+            //focuses on building a families of parts (either simple or complex), and returns the part IMMEDIATELY. 
+            //Client assembles the parts into complex object
 
+            //AbstractMarketFactory f1 = new SecurityMarketFactory();
+            //IMarket mktE = f1.CreateMarket(); //parts
+            //Tradable t1 = f1.CreateTradable("t1"); //parts
+            //mktE.AddTradable(t1);
+            //Exchange ex = f1.CreateExchange();
+            //mktE.AddExchange(ex);
+            //mktE.Display();           
 
-            //AbstractMarketFactory f = new SecurityMarketFactory();
-            //IMarket mktE = f.CreateMarket();
-            //mktE.Display();
-
-            //AbstractMarketFactory f = new FuturesMarketFactory();
-            //IMarket mktF = f.CreateMarket();
+            //AbstractMarketFactory f2 = new CFDMarketFactory();
+            //IMarket mktF = f2.CreateMarket(); //parts
+            //Tradable t2 = f2.CreateTradable("t2"); //parts
+            //mktF.AddTradable(t2);
+            //Exchange ex2 = f2.CreateExchange();
+            //mktF.AddExchange(ex2);
             //mktF.Display();
 
             //Builder
             //the same construction process can create different representations
             //Separate the construction of a complex object from its representation so that the same construction process can create different representations
-            //Builder returns the product as a final step
+            //BUILDER RETURNS THE PRODUCT AS A FINAL STEP
             //Change Builder, change representation
-
 
             //MarketBuilder mktBuilder = new SecurityMarketBuilder();            
             //mktBuilder.BuildTradable("0005HK"); //same construction process
             //IMarket mktG = mktBuilder.GetMarket();
             //mktG.Display();
 
-            MarketBuilder mktBuilder = new CFDMarketBuilder();
-            mktBuilder.BuildTradable("0005HK");  //same construction process
-            IMarket mktG = mktBuilder.GetMarket();
-            mktG.Display();
+            //MarketBuilder mktBuilder = new CFDMarketBuilder();
+            //mktBuilder.BuildTradable("0005HK");  //same construction process
+            //IMarket mktG = mktBuilder.GetMarket();
+            //mktG.Display();
+
+            //Prototype
+            //Abstract Factory and Builder are used for a pre-set combination of parts
+            //for multi options x multi options combination => class explosion
+            //
+            //each market has 1 tradable and 1 exchange
+            //tradable: Security or CFD
+            //exchange: Security Exchange or CFD exchange
+
+            //MarketPrototypeFactory f3 = new MarketPrototypeFactory(new Exchanges.SecurityExchange("PrototypeExchange"), new Security("PrototypeTradable"));
+            //IMarket mktH = f3.CreateMarket();
+            //Exchange ex3 = f3.CreateExchange("Security Exchange ABC");
+            //mktH.AddExchange(ex3);
+            //Tradable t = f3.CreateTradable("Security AAPL");
+            //mktH.AddTradable(t);
+            //mktH.Display();
+
+            //MarketPrototypeFactory f4 = new MarketPrototypeFactory(new Exchanges.CFDExchange("PrototypeExchange"), new CFD("PrototypeTradable"));
+            //IMarket mktI = f4.CreateMarket();
+            //Exchange ex4 = f4.CreateExchange("CFD Exchange ABC");
+            //mktI.AddExchange(ex4);
+            //Tradable t = f4.CreateTradable("CFD AAPL");
+            //mktI.AddTradable(t);
+            //mktI.Display();
+
+            //MarketPrototypeFactory f5 = new MarketPrototypeFactory(new Exchanges.FuturesExchange("PrototypeExchange"), new Futures("PrototypeTradable", "", 0, 0));
+            //IMarket mktJ = f5.CreateMarket();
+            //Exchange ex5 = f5.CreateExchange("Futures Exchange ABC");
+            //mktJ.AddExchange(ex5);
+            //Tradable t5 = f5.CreateTradable("Futures AAPL");
+            //mktJ.AddTradable(t5);
+            //mktJ.Display();
+
+
+            //Singleton
+
+            /////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 
         }

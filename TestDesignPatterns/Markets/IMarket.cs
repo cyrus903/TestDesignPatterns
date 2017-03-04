@@ -9,6 +9,7 @@ namespace TestDesignPatterns
     {   
         void Create();
         void Display();
-        void Add(Tradable t);
+        void AddTradable(Tradable t);
+        void AddExchange(Exchange ex);
     }
 }

@@ -7,10 +7,21 @@ namespace TestDesignPatterns
 {
     class Exchange
     {
-        string Name { get; set; }
+        public string name { get; set; }
+
+        public Exchange(string name)
+        {
+            this.name = name;
+        }
 
         public virtual void Trade()
         {
+        }
+
+        public Exchange Clone()
+        {
+            Exchange ex = new Exchange(this.name);
+            return ex;
         }
     }
 

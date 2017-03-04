@@ -14,9 +14,15 @@ namespace TestDesignPatterns
             this.symbol = symbol;
         }
 
-        public void MethodA()
+        protected void MethodA()
         {
             //do something A
+        }
+
+        public virtual Tradable Clone()
+        {
+            Tradable t = new Tradable(this.symbol);
+            return t;
         }
     }
 }

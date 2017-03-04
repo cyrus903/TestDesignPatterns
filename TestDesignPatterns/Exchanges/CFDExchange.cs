@@ -5,9 +5,9 @@ using System.Text;
 
 namespace TestDesignPatterns.Exchanges
 {
-    class FuturesExchange : Exchange
+    class CFDExchange : Exchange
     {
-        public FuturesExchange(string name)
+        public CFDExchange(string name)
             : base(name)
         {
         }

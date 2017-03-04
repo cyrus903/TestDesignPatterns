@@ -11,7 +11,7 @@ namespace TestDesignPatterns
 
         protected void Add(Tradable t)
         {
-            mkt.Add(t);
+            mkt.AddTradable(t);
         }
 
         public virtual IMarket GetMarket()

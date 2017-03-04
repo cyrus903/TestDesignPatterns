@@ -16,14 +16,14 @@ namespace TestDesignPatterns
 
         public override void Create()
         {              
-            Tradable t = new Security("0001");            
-            Add(t);
+            Tradable t = new Security("0001");
+            AddTradable(t);
 
-            Tradable t2 = new Futures("CHKH7", "0001", 2017, 1);         
-            Add(t2);
+            Tradable t2 = new Futures("CHKH7", "0001", 2017, 1);
+            AddTradable(t2);
 
-            Tradable t3 = new Option("CHKH7_100C", "0001", 2017, 1, 100, 'C');     
-            Add(t3);            
+            Tradable t3 = new Option("CHKH7_100C", "0001", 2017, 1, 100, 'C');
+            AddTradable(t3);            
         }
 
         //public  void Add(Tradable t)
