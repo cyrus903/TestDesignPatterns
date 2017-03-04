@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TestDesignPatterns
 {
-    class Market2 : Market1
+    class Market2 : Market
     {
         public override void Create()
         {
