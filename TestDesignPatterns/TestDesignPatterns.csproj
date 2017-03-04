@@ -45,10 +45,12 @@
   <ItemGroup>
     <Compile Include="AbstractFactories\AbstractFactory.cs" />
     <Compile Include="Application.cs" />
+    <Compile Include="Builders\Builder.cs" />
     <Compile Include="Creator.cs" />
     <Compile Include="Exchanges\Exchange.cs" />
     <Compile Include="Exchanges\FuturesExchange.cs" />
     <Compile Include="Exchanges\SecurityExchange.cs" />
+    <Compile Include="Tradables\CFD\CFD.cs" />
     <Compile Include="Tradables\Derivatives\Derivative.cs" />
     <Compile Include="Tradables\Derivatives\Futures.cs" />
     <Compile Include="Markets\IMarket.cs" />

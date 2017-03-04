@@ -29,15 +29,35 @@ namespace TestDesignPatterns
             //IMarket mktD = c2.Create(); //Factory Method            
 
             //How to create a different market (different compositions) at run-time?
-            //Abstract Factory
+            //Abstract Factory: To create a family of objects - without specifying the concrete classes
+            //Provide an interface for creating families of related or dependent objects without specifying their concrete classes
+            //focuses on building a families of parts (either simple or complex), and returns the part immediately. Client assembles the parts into complex object
+
 
             //AbstractMarketFactory f = new SecurityMarketFactory();
             //IMarket mktE = f.CreateMarket();
             //mktE.Display();
 
-            AbstractMarketFactory f = new FuturesMarketFactory();
-            IMarket mktF = f.CreateMarket();
-            mktF.Display();
+            //AbstractMarketFactory f = new FuturesMarketFactory();
+            //IMarket mktF = f.CreateMarket();
+            //mktF.Display();
+
+            //Builder
+            //the same construction process can create different representations
+            //Separate the construction of a complex object from its representation so that the same construction process can create different representations
+            //Builder returns the product as a final step
+            //Change Builder, change representation
+
+
+            //MarketBuilder mktBuilder = new SecurityMarketBuilder();            
+            //mktBuilder.BuildTradable("0005HK"); //same construction process
+            //IMarket mktG = mktBuilder.GetMarket();
+            //mktG.Display();
+
+            MarketBuilder mktBuilder = new CFDMarketBuilder();
+            mktBuilder.BuildTradable("0005HK");  //same construction process
+            IMarket mktG = mktBuilder.GetMarket();
+            mktG.Display();
 
 
         }

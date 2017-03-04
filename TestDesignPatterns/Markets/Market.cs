@@ -50,8 +50,7 @@ namespace TestDesignPatterns
                 {
                     Console.WriteLine("YES Futures underlying=" + test2.underlying);
                     Console.WriteLine("Theroratical Price=" + test2.TheoraticalPrice());
-                }
-              
+                }              
 
                 Console.WriteLine("Is Option?");
                 Option test3 = o as Option;
@@ -59,6 +58,13 @@ namespace TestDesignPatterns
                 {
                     Console.WriteLine("YES Option underlying=" + test3.underlying);
                     Console.WriteLine("Theroratical Price=" + test3.TheoraticalPrice());
+                }
+
+                Console.WriteLine("Is CFD?");
+                CFD test4 = o as CFD;
+                if (test4 != null)
+                {
+                    Console.WriteLine("YES symbol = " + test4.symbol);
                 }
 
 
