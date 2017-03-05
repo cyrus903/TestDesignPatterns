@@ -71,6 +71,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tradables\Securities\Security.cs" />
+    <Compile Include="Tradables\Strategy.cs" />
     <Compile Include="Tradables\Tradable.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -9,6 +9,8 @@ namespace TestDesignPatterns
     {
         public string symbol { get; set; }
 
+        public double price { get; set; }
+
         public Tradable(string symbol)
         {
             this.symbol = symbol;
@@ -23,6 +25,11 @@ namespace TestDesignPatterns
         {
             Tradable t = new Tradable(this.symbol);
             return t;
+        }
+
+        public virtual double Price()
+        {
+            return price;
         }
     }
 }

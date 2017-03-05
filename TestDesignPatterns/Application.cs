@@ -159,14 +159,38 @@ namespace TestDesignPatterns
             //Builder
             //segregate implememtation by delegation to implementation class
 
-            FlexibleMarket mkt = new FlexibleMarket(new SecurityMarketImplementation());
-            mkt.Create();
-            mkt.AddTradable(new Security("test2"));
-            mkt.AddExchange(new Exchanges.SecurityExchange("1"));
-            mkt.Display();
+            //FlexibleMarket mkt = new FlexibleMarket(new SecurityMarketImplementation());
+            //mkt.Create();
+            //mkt.AddTradable(new Security("test2"));
+            //mkt.AddExchange(new Exchanges.SecurityExchange("1"));
+            //mkt.Display();
 
 
             //////////////////////////////////////////////
+
+            //Composite Pattern
+            //Compose objects into tree structures to represent part-whole hierarchies. 
+            //Composite let clients treat individual objects and compositions of objects uniformly
+            //Strategy is a tradable and Strategy has tradable(s)
+
+            Strategy s = new Strategy("Calendar Spread");
+            Futures f1 = new Futures("ABCF7", "ABC", 2017, 1);
+            f1.price = 1;
+            Futures f2 = new Futures("ABCG7", "ABC", 2017, 2);
+            f2.price = 2;
+            s.AddTradable(f1);
+            s.AddTradable(f2);
+            Console.WriteLine("strategy price s = " + s.Price());
+
+            //recurrsive
+            Strategy s2 = new Strategy("new strategy");
+            s2.AddTradable(s);
+            Futures f3 = new Futures("ABCH7", "ABC", 2017, 3);
+            f3.price = 4;
+            s2.AddTradable(f3);
+            Console.WriteLine("strategy price s2 = " + s2.Price());
+
+            
 
             //////////////////////////////////////////////
 
