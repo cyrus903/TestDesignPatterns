@@ -16,6 +16,8 @@ namespace TestDesignPatterns
 
             //Creational Patterns
 
+            //////////////////////////////////////////////
+
             //Factory Methods: Market is defined (number of securities / derivatives) at compilation. (Market1 / Market2 / Market3 can be switch but compisitions of them could not be changed)
 
             //IMarket mktA = CreateMarket(); //Factory Method
@@ -27,7 +29,9 @@ namespace TestDesignPatterns
             //IMarket mktC = c1.Create(1); 
 
             //Creator c2 = new GenericCreator<Market1>(); //Factory Method using Generic Creator
-            //IMarket mktD = c2.Create(); //Factory Method            
+            //IMarket mktD = c2.Create(); //Factory Method   
+
+            //////////////////////////////////////////////
 
             //How to create a different market (different compositions) at run-time?
             //Abstract Factory: To create a family of objects - without specifying the concrete classes
@@ -51,6 +55,8 @@ namespace TestDesignPatterns
             //mktF.AddExchange(ex2);
             //mktF.Display();
 
+            //////////////////////////////////////////////
+
             //Builder
             //the same construction process can create different representations
             //Separate the construction of a complex object from its representation so that the same construction process can create different representations
@@ -66,6 +72,8 @@ namespace TestDesignPatterns
             //mktBuilder.BuildTradable("0005HK");  //same construction process
             //IMarket mktG = mktBuilder.GetMarket();
             //mktG.Display();
+
+            //////////////////////////////////////////////
 
             //Prototype
             //Abstract Factory and Builder are used for a pre-set combination of parts
@@ -99,6 +107,7 @@ namespace TestDesignPatterns
             //mktJ.AddTradable(t5);
             //mktJ.Display();
 
+            //////////////////////////////////////////////
 
             //Singleton
             //Singleton.Logger logger = Singleton.Logger.Instance();
@@ -124,29 +133,51 @@ namespace TestDesignPatterns
             //Adapter
             //also known as Wrapper
             //client uses new system and reuse old system codes
-            //by class adapter or object adapter
+            //Convert the interface of a class into another interface clients expect. 
+            //Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces
+            //by class adapter or object adapter            
 
             //class adapter
-            INewMarket mkt = new ClassAdapter_NewMarket();
-            mkt.AddTradable(new Security("class adapter"));
-            mkt.Display();
+            //INewMarket mkt = new ClassAdapter_NewMarket();
+            //mkt.AddTradable(new Security("class adapter"));
+            //mkt.Display();
 
-            Market test = mkt as Market;
-            if (test != null)
-            {
-                test.OldMethod(); //interfaces of old system are exposed to new system => problematic
-            }           
+            //Market test = mkt as Market;
+            //if (test != null)
+            //{
+            //    test.OldMethod(); //interfaces of old system are exposed to new system => problematic
+            //}           
 
             //object adapter
-            INewMarket mkt2 = new ObjectAdapter_NewMarket();
-            //interfaces of old system do not expose
-            mkt2.AddTradable(new Security("object adapter"));            
-            mkt2.Display();
+            //INewMarket mkt2 = new ObjectAdapter_NewMarket();
+            ////interfaces of old system do not expose
+            //mkt2.AddTradable(new Security("object adapter"));            
+            //mkt2.Display();
+
+            //////////////////////////////////////////////
+
+            //Builder
+            //segregate implememtation by delegation to implementation class
+
+            FlexibleMarket mkt = new FlexibleMarket(new SecurityMarketImplementation());
+            mkt.Create();
+            mkt.AddTradable(new Security("test2"));
+            mkt.AddExchange(new Exchanges.SecurityExchange("1"));
+            mkt.Display();
 
 
+            //////////////////////////////////////////////
+
+            //////////////////////////////////////////////
+
+            //////////////////////////////////////////////
+
+            //////////////////////////////////////////////
+
+            //////////////////////////////////////////////
 
 
-
+            /////////////////////////////////////////////////////////////////////////////////////////
 
 
             //Behaviour Patterns

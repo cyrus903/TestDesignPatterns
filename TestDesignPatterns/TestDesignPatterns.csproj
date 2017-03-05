@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="AbstractFactories\MarketFactory.cs" />
     <Compile Include="Application.cs" />
+    <Compile Include="Bridge\AbstractMarketImplementation.cs" />
+    <Compile Include="Bridge\AbstractMarket.cs" />
+    <Compile Include="Bridge\IMarketImplementation.cs" />
     <Compile Include="Builders\Builder.cs" />
     <Compile Include="Creator.cs" />
     <Compile Include="Exchanges\CFDExchange.cs" />

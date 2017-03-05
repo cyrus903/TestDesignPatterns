@@ -6,3 +6,7 @@ C:\Users\Cyrus\Documents\GitHub\TestDesignPatterns\TestDesignPatterns\obj\x86\De
 C:\Users\Cyrus\Documents\GitHub\TestDesignPatterns\TestDesignPatterns\obj\x86\Debug\TestDesignPatterns.pdb
 C:\Users\Cyrus\Documents\GitHub\TestDesignPatterns\TestDesignPatterns\bin\Debug\TestDesignPatterns.exe
 C:\Users\Cyrus\Documents\GitHub\TestDesignPatterns\TestDesignPatterns\bin\Debug\TestDesignPatterns.pdb
+C:\Users\1007053040\Documents\GitHub\TestDesignPatterns\TestDesignPatterns\obj\x86\Debug\TestDesignPatterns.exe
+C:\Users\1007053040\Documents\GitHub\TestDesignPatterns\TestDesignPatterns\obj\x86\Debug\TestDesignPatterns.pdb
+C:\Users\1007053040\Documents\GitHub\TestDesignPatterns\TestDesignPatterns\bin\Debug\TestDesignPatterns.exe
+C:\Users\1007053040\Documents\GitHub\TestDesignPatterns\TestDesignPatterns\bin\Debug\TestDesignPatterns.pdb
