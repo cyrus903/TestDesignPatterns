@@ -50,6 +50,7 @@
     <Compile Include="Bridge\IMarketImplementation.cs" />
     <Compile Include="Builders\Builder.cs" />
     <Compile Include="Creator.cs" />
+    <Compile Include="Decorators\Decorator.cs" />
     <Compile Include="Exchanges\CFDExchange.cs" />
     <Compile Include="Exchanges\Exchange.cs" />
     <Compile Include="Exchanges\FuturesExchange.cs" />

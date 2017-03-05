@@ -173,26 +173,48 @@ namespace TestDesignPatterns
             //Composite let clients treat individual objects and compositions of objects uniformly
             //Strategy is a tradable and Strategy has tradable(s)
 
-            Strategy s = new Strategy("Calendar Spread");
-            Futures f1 = new Futures("ABCF7", "ABC", 2017, 1);
-            f1.price = 1;
-            Futures f2 = new Futures("ABCG7", "ABC", 2017, 2);
-            f2.price = 2;
-            s.AddTradable(f1);
-            s.AddTradable(f2);
-            Console.WriteLine("strategy price s = " + s.Price());
+            //Strategy s = new Strategy("Calendar Spread");
+            //Futures f1 = new Futures("ABCF7", "ABC", 2017, 1);
+            //f1.price = 1;
+            //Futures f2 = new Futures("ABCG7", "ABC", 2017, 2);
+            //f2.price = 2;
+            //s.AddTradable(f1);
+            //s.AddTradable(f2);
+            //Console.WriteLine("strategy price s = " + s.Price());
 
-            //recurrsive
-            Strategy s2 = new Strategy("new strategy");
-            s2.AddTradable(s);
-            Futures f3 = new Futures("ABCH7", "ABC", 2017, 3);
-            f3.price = 4;
-            s2.AddTradable(f3);
-            Console.WriteLine("strategy price s2 = " + s2.Price());
+            ////recurrsive
+            //Strategy s2 = new Strategy("new strategy");
+            //s2.AddTradable(s);
+            //Futures f3 = new Futures("ABCH7", "ABC", 2017, 3);
+            //f3.price = 4;
+            //s2.AddTradable(f3);
+            //Console.WriteLine("strategy price s2 = " + s2.Price());
 
             
 
             //////////////////////////////////////////////
+
+            //Decorator
+            //Also known as Wrapper (vs Adaptor)
+            //Class inheritence approach vs object delegation approach
+            //Class inheritence approach: combinational problem, class explosion
+            //Object delegation approach is better
+            //Attach additional responsibilities to an object dynamically. 
+            //Decorators provide a flexible alternative to subclassing for extending functionality
+
+            //Stream is a decorator
+            //FileStream, CryptoStream has-a Stream and is-a Stream.
+            //Composite Pattern?
+            //infinite recursive to work on _Next Stream
+            //flexibible number of layers / number of stream operatons
+
+            Decorator d = new Decorator();
+            d.Write();
+            string output = d.Read();
+            Console.WriteLine(output);
+
+
+
 
             //////////////////////////////////////////////
 
