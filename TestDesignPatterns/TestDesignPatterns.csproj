@@ -51,6 +51,9 @@
     <Compile Include="Exchanges\Exchange.cs" />
     <Compile Include="Exchanges\FuturesExchange.cs" />
     <Compile Include="Exchanges\SecurityExchange.cs" />
+    <Compile Include="NewMarkets\INewMarket.cs" />
+    <Compile Include="NewMarkets\ClassAdapter_NewMarket.cs" />
+    <Compile Include="NewMarkets\ObjectAdapter_NewMarket.cs" />
     <Compile Include="Singleton\DerivedLogger.cs" />
     <Compile Include="Singleton\Logger.cs" />
     <Compile Include="Tradables\CFD\CFD.cs" />

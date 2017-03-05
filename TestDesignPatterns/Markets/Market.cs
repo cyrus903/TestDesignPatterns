@@ -14,12 +14,13 @@ namespace TestDesignPatterns
 
         public Market()
         {
-            Create();
+            //Create();
             //Display();
         }
 
         public virtual void Create()
         {
+            //AddTradable(new Security("test1"));
         }
 
         public virtual void Display()
@@ -108,6 +109,11 @@ namespace TestDesignPatterns
         public void AddExchange(Exchange ex)
         {
             array.Add(ex);
+        }
+
+        public void OldMethod()
+        {
+            Console.WriteLine("This is an old method of Market");
         }
  
     }

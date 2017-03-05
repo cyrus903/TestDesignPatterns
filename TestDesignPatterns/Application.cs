@@ -14,6 +14,7 @@ namespace TestDesignPatterns
             //Market3 mkt = new Market2(); //not ok
             //IMarket mkt = new Market2(); //ok
 
+            //Creational Patterns
 
             //Factory Methods: Market is defined (number of securities / derivatives) at compilation. (Market1 / Market2 / Market3 can be switch but compisitions of them could not be changed)
 
@@ -100,25 +101,55 @@ namespace TestDesignPatterns
 
 
             //Singleton
-            Singleton.Logger logger = Singleton.Logger.Instance();
-            logger.Log(logger.GetHashCode().ToString());
+            //Singleton.Logger logger = Singleton.Logger.Instance();
+            //logger.Log(logger.GetHashCode().ToString());
 
-            Singleton.Logger logger2 = Singleton.Logger.Instance();
-            logger2.Log(logger2.GetHashCode().ToString());
+            //Singleton.Logger logger2 = Singleton.Logger.Instance();
+            //logger2.Log(logger2.GetHashCode().ToString());
 
-            Console.WriteLine(logger.Equals(logger2));
+            //Console.WriteLine(logger.Equals(logger2));
 
-            Singleton.Logger logger3 = Singleton.DerivedLogger.Instance();
-            logger.Log(logger3.GetHashCode().ToString());
+            //Singleton.Logger logger3 = Singleton.DerivedLogger.Instance();
+            //logger.Log(logger3.GetHashCode().ToString());
 
-            Singleton.Logger logger4 = Singleton.DerivedLogger.Instance();
-            logger2.Log(logger4.GetHashCode().ToString());
+            //Singleton.Logger logger4 = Singleton.DerivedLogger.Instance();
+            //logger2.Log(logger4.GetHashCode().ToString());
 
-            Console.WriteLine(logger3.Equals(logger4));
+            //Console.WriteLine(logger3.Equals(logger4));
 
             /////////////////////////////////////////////////////////////////////////////////////////
 
+            //Structual Patterns
 
+            //Adapter
+            //also known as Wrapper
+            //client uses new system and reuse old system codes
+            //by class adapter or object adapter
+
+            //class adapter
+            INewMarket mkt = new ClassAdapter_NewMarket();
+            mkt.AddTradable(new Security("class adapter"));
+            mkt.Display();
+
+            Market test = mkt as Market;
+            if (test != null)
+            {
+                test.OldMethod(); //interfaces of old system are exposed to new system => problematic
+            }           
+
+            //object adapter
+            INewMarket mkt2 = new ObjectAdapter_NewMarket();
+            //interfaces of old system do not expose
+            mkt2.AddTradable(new Security("object adapter"));            
+            mkt2.Display();
+
+
+
+
+
+
+
+            //Behaviour Patterns
 
 
 
