@@ -100,6 +100,21 @@ namespace TestDesignPatterns
 
 
             //Singleton
+            Singleton.Logger logger = Singleton.Logger.Instance();
+            logger.Log(logger.GetHashCode().ToString());
+
+            Singleton.Logger logger2 = Singleton.Logger.Instance();
+            logger2.Log(logger2.GetHashCode().ToString());
+
+            Console.WriteLine(logger.Equals(logger2));
+
+            Singleton.Logger logger3 = Singleton.DerivedLogger.Instance();
+            logger.Log(logger3.GetHashCode().ToString());
+
+            Singleton.Logger logger4 = Singleton.DerivedLogger.Instance();
+            logger2.Log(logger4.GetHashCode().ToString());
+
+            Console.WriteLine(logger3.Equals(logger4));
 
             /////////////////////////////////////////////////////////////////////////////////////////
 
