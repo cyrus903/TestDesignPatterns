@@ -44,7 +44,7 @@ namespace TestDesignPatterns
 
         public override Exchange CreateExchange(string name)
         {
-            return new Exchanges.SecurityExchange(name);
+            return new SecurityExchange(name);
         }
     }
 
@@ -64,7 +64,7 @@ namespace TestDesignPatterns
 
         public override Exchange CreateExchange(string name)
         {
-            return new Exchanges.CFDExchange(name);
+            return new CFDExchange(name);
         }
 
     }

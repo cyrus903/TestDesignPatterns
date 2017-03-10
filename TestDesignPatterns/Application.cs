@@ -208,15 +208,27 @@ namespace TestDesignPatterns
             //infinite recursive to work on _Next Stream
             //flexibible number of layers / number of stream operatons
 
-            Decorator d = new Decorator();
-            d.Write();
-            string output = d.Read();
-            Console.WriteLine(output);
+            //Decorator d = new Decorator();
+            //d.Write();
+            //string output = d.Read();
+            //Console.WriteLine(output);
 
 
 
 
             //////////////////////////////////////////////
+
+            //Visitor Pattern
+
+            Exchange exch = new SecurityExchange("HKEX");
+            Visitor v1 = new Visitor_Trade();
+            exch.Accept(v1);
+            Visitor v2 = new Visitor_Settle();
+            exch.Accept(v2);
+
+            //Exchange exch2 = new CFDExchange("CFD EX");
+            //exch2.Accept(v1);
+            //exch2.Accept(v2);
 
             //////////////////////////////////////////////
 

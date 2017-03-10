@@ -30,7 +30,7 @@ namespace TestDesignPatterns
         {
             m.AddTradable(t);
         }
-        public void AddExchange(IMarket m, Exchanges.SecurityExchange ex)
+        public void AddExchange(IMarket m, SecurityExchange ex)
         {           
             m.AddExchange(ex);           
         }
@@ -46,7 +46,7 @@ namespace TestDesignPatterns
         {
             m.AddTradable(t);
         }
-        public void AddExchange(IMarket m, Exchanges.CFDExchange ex)
+        public void AddExchange(IMarket m, CFDExchange ex)
         {
             m.AddExchange(ex);
         }

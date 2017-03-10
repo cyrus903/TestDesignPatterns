@@ -23,6 +23,13 @@ namespace TestDesignPatterns
             Exchange ex = new Exchange(this.name);
             return ex;
         }
+
+        public virtual void Accept(Visitor v)
+        {
+            v.Visit(this);
+        }
+
+        
     }
 
     

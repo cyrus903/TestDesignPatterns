@@ -53,8 +53,10 @@
     <Compile Include="Decorators\Decorator.cs" />
     <Compile Include="Exchanges\CFDExchange.cs" />
     <Compile Include="Exchanges\Exchange.cs" />
+    <Compile Include="Exchanges\Visitor_Settle.cs" />
     <Compile Include="Exchanges\FuturesExchange.cs" />
     <Compile Include="Exchanges\SecurityExchange.cs" />
+    <Compile Include="Exchanges\Visitor_Trade.cs" />
     <Compile Include="NewMarkets\INewMarket.cs" />
     <Compile Include="NewMarkets\ClassAdapter_NewMarket.cs" />
     <Compile Include="NewMarkets\ObjectAdapter_NewMarket.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Tradables\Securities\Security.cs" />
     <Compile Include="Tradables\Strategy.cs" />
     <Compile Include="Tradables\Tradable.cs" />
+    <Compile Include="Exchanges\Visitor.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
